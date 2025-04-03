@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #0e0e0e;
+  color: #f4f4f4;
+}
+header, footer {
+  background-color: #1a1a1a;
+  padding: 1em 2em;
+  text-align: center;
+}
+header nav a {
+  color: #fff;
+  margin: 0 1em;
+  text-decoration: none;
+  font-weight: bold;
+}
+.hero {
+  text-align: center;
+  padding: 6em 2em;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.cta-button, button {
+  margin: 1em;
+  padding: 1em 2em;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  background-color: #8b0000;
+  color: #fff;
+  cursor: pointer;
+}
+.section {
+  padding: 3em 2em;
+  max-width: 1000px;
+  margin: auto;
+}
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+.about img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+}
+.about-text {
+  flex: 1;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5em;
+  margin-top: 2em;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+}
+footer {
+  background-color: #111;
+  padding: 2em;
+  color: #777;
+  font-size: 0.9em;
+}
