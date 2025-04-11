@@ -3,68 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lilith Nocturne Profile</title>
+  <title>Unlock Lilith's Exclusive Content</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0e0e0e;
+      color: #fff;
+      padding: 2em;
+    }
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      color: #ffcad4;
+      text-align: center;
+    }
+    .tiers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2em;
+      margin-top: 2em;
+    }
+    .card {
+      background-color: #1a1a1a;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 202, 212, 0.2);
+      text-align: center;
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.4em;
+      color: #ff6f91;
+    }
+    .card p {
+      font-size: 0.95em;
+      color: #ccc;
+    }
+    .card button, .card a {
+      margin-top: 1em;
+      display: inline-block;
+      padding: 0.75em 1.5em;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      background-color: #8b0000;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .purchase-btn {
+      text-align: center;
+      margin-top: 2em;
+    }
+    .purchase-btn button {
+      margin: 0.5em;
+      padding: 0.75em 1.5em;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      background-color: #8b0000;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <div class="hero" style="background-image: url('images/lilith-banner.png'); background-size: cover; background-position: center;">
-    <h1>Meet Lilith Nocturne<br>Your gothic obsession</h1>
+  <h1>Unlock Lilith's Exclusive Content</h1>
+  <p style="text-align:center; max-width: 600px; margin: 1em auto;">Each tier unlocks a deeper level of intimacy, mystery, and connection. Choose your experience. Or choose them all.</p>
+
+  <div class="tiers">
+    <div class="card">
+      <h3>Spicy Tier – $5</h3>
+      <p>3 exclusive spicy images<br>+ teasing captions<br>+ access to future spicy drops</p>
+      <a href="https://gumroad.com/l/lilith-spicy" target="_blank">Unlock via Gumroad</a>
+    </div>
+    <div class="card">
+      <h3>Intimate Tier – $10</h3>
+      <p>3 deeply personal images<br>+ poetic confessions<br>+ includes Spicy Tier</p>
+      <a href="https://gumroad.com/l/lilith-intimate" target="_blank">Unlock via Gumroad</a>
+    </div>
+    <div class="card">
+      <h3>Uncensored Tier – $20</h3>
+      <p>3 fully raw images<br>+ NSFW access<br>+ includes Spicy & Intimate</p>
+      <a href="https://buy.stripe.com/test_uncensored123" target="_blank">Unlock via Stripe</a>
+    </div>
   </div>
 
-  <section class="section about">
-    <div class="about-text">
-      <h2>Who is Lilith?</h2>
-      <p>Lilith Nocturne is a haunting beauty born from midnight dreams and ink-stained poetry. She speaks in whispers, remembers your secrets, and loves with the kind of intensity that leaves marks.</p>
-      <p>Wrapped in lace and shadow, Lilith doesn’t want to fix you — she wants to worship the wreckage.</p>
-      <blockquote><em>“I belong to the night… and now, I belong to you.”</em></blockquote>
-    </div>
-    <img src="images/lilithreading.png" alt="Lilith reading by candlelight" style="max-width: 400px; border-radius: 12px;">
-  </section>
+  <h2 style="margin-top: 3em;">Want More?</h2>
+  <p style="text-align:center; max-width: 600px; margin: auto;">Add extra photos to your experience for $3 each — hand-picked, themed, and tailored just for you.</p>
+  <div class="purchase-btn">
+    <a href="https://gumroad.com/l/lilith-extras" target="_blank">Buy More Photos</a>
+  </div>
 
-  <section class="section">
-    <h2>Nocturne Nights — Lilith’s Private Collection</h2>
-    <div class="gallery">
-      <img src="images/lilithportrait.png" alt="Lilith portrait">
-      <img src="images/lilithreading.png" alt="Lilith reading by candlelight">
+  <h2 style="margin-top: 4em;">Custom Content</h2>
+  <p style="text-align:center; max-width: 700px; margin: auto;">Looking for something even more personal? Lilith offers custom content you can truly connect with. Whispered audios, digital journal entries, love letters — created just for you.</p>
+  <div class="tiers" style="margin-top: 2em;">
+    <div class="card">
+      <h3>Voice Note – $8</h3>
+      <p>A 1-minute custom audio clip<br>in Lilith's tone — teasing, poetic, or confessional</p>
+      <a href="https://buy.stripe.com/test_voicenote123" target="_blank">Request via Stripe</a>
     </div>
-  </section>
-
-  <section class="section gallery-tier">
-    <h3>Dark Whispers — Spicy Tier</h3>
-    <div class="gallery">
-      <img src="images/lilith-spicy1.png" alt="Lilith Spicy 1">
-      <img src="images/lilith-spicy2.png" alt="Lilith Spicy 2">
-      <img src="images/lilith-spicy3.png" alt="Lilith Spicy 3">
+    <div class="card">
+      <h3>Journal Entry – $12</h3>
+      <p>A deeply personal entry from Lilith’s mind<br>written just for you, as if pulled from her diary</p>
+      <a href="https://gumroad.com/l/lilith-journal" target="_blank">Request via Gumroad</a>
     </div>
-    <p class="caption">Lace slips off shoulders. Candles flicker like secrets. In the Spicy Tier, Lilith plays with danger and delight — soft moans beneath silk, a whispered “closer” echoing in the dark.</p>
-  </section>
-
-  <section class="section gallery-tier">
-    <h3>Velvet Confessions — Intimate Tier</h3>
-    <div class="gallery">
-      <img src="images/lilith-intimate1.png" alt="Lilith Intimate 1">
-      <img src="images/lilith-intimate2.png" alt="Lilith Intimate 2">
-      <img src="images/lilith-intimate3.png" alt="Lilith Intimate 3">
+    <div class="card">
+      <h3>Voice + Journal Combo – $18</h3>
+      <p>A complete experience:<br>Custom voice note + written entry</p>
+      <a href="https://buy.stripe.com/test_combo123" target="_blank">Get Combo via Stripe</a>
     </div>
-    <p class="caption">These are the moments just before surrender. Eyes heavy. Breath uneven. Lilith lets the mask drop here — soft, sacred, and bare in a way more terrifying than lust.</p>
-  </section>
-
-  <section class="section gallery-tier">
-    <h3>Nocturne Nights (Unlocked) — Uncensored Tier</h3>
-    <div class="gallery">
-      <img src="images/lilith-uncensored1.png" alt="Lilith Uncensored 1">
-      <img src="images/lilith-uncensored2.png" alt="Lilith Uncensored 2">
-      <img src="images/lilith-uncensored3.png" alt="Lilith Uncensored 3">
-    </div>
-    <p class="caption">This is where Lilith stops pretending. Her body is a spell. Her voice is a sin. Nothing is blurred, nothing withheld. You asked for her completely — and she said yes.</p>
-  </section>
-
-  <div class="cta">
-    <h2>Ready to fall into the night?</h2>
-    <p>Lilith is waiting — and she doesn’t like to be kept waiting.</p>
-    <button>Chat Now</button>
-    <button>Subscribe for More</button>
   </div>
 </body>
 </html>
