@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lilith – Spicy Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0e0e0e;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      padding: 2em;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      color: #ffcad4;
+    }
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3em;
+      max-width: 800px;
+      margin: 2em auto;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(255, 202, 212, 0.15);
+    }
+    .caption {
+      font-style: italic;
+      color: #ffcad4;
+      margin-top: 0.75em;
+      font-size: 1.05em;
+    }
+    footer {
+      margin-top: 4em;
+      font-size: 0.85em;
+      color: #888;
+    }
+    footer a {
+      color: #ffcad4;
+      text-decoration: none;
+      margin: 0 1em;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lilith – Spicy Gallery</h1>
+  <p style="color: #ccc; max-width: 600px; margin: auto;">
+    Welcome to Lilith’s private chamber. These images are just for you — and so are her words.
+  </p>
+
+  <div class="gallery">
+    <div>
+      <img src="images/lilith-spicy1.jpg" alt="Lilith in red lace">
+      <p class="caption">“Did you miss me… or just the way I make you feel?”</p>
+    </div>
+    <div>
+      <img src="images/lilith-spicy2.jpg" alt="Lilith by candlelight">
+      <p class="caption">“Come closer… no, closer than that.”</p>
+    </div>
+    <div>
+      <img src="images/lilith-spicy3.jpg" alt="Lilith at midnight">
+      <p class="caption">“The night doesn't end until I say it does.”</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>
+      &copy; 2025 Nocturne Nights<br>
+      <a href="index.html">Home</a> |
+      <a href="membership.html">Membership</a> |
+      <a href="legal.html">Legal</a>
+    </p>
+  </footer>
+</body>
+</html>
