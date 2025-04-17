@@ -65,6 +65,113 @@
       <img src="images/lilithbedroom.png" alt="Lilith in bedroom">
     </div>
   </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teaser Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0e0e0e;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      text-align: center;
+      padding: 2em;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      color: #ffcad4;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2em;
+      max-width: 1000px;
+      margin: 2em auto;
+    }
+    .teaser {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 0 14px rgba(255, 202, 212, 0.2);
+    }
+    .teaser img {
+      width: 100%;
+      display: block;
+      filter: blur(10px) brightness(0.6);
+      transition: filter 0.3s ease;
+    }
+    .teaser:hover img {
+      filter: blur(8px) brightness(0.8);
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: #ffcad4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2em;
+      font-family: 'Playfair Display', serif;
+      padding: 1em;
+      text-align: center;
+    }
+    .teaser a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+    footer {
+      margin-top: 4em;
+      font-size: 0.85em;
+      color: #888;
+    }
+    footer a {
+      color: #ffcad4;
+      text-decoration: none;
+      margin: 0 1em;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Teaser Gallery – Unlock Lilith's Secrets</h1>
+  <div class="gallery">
+    <div class="teaser">
+      <a href="membership.html">
+        <img src="images/lilith-intimate-blur.jpg" alt="Intimate Tease">
+        <div class="overlay">Wanderer Tier – A quiet softness she hides...</div>
+      </a>
+    </div>
+    <div class="teaser">
+      <a href="membership.html">
+        <img src="images/lilith-spicy-blur.jpg" alt="Spicy Tease">
+        <div class="overlay">Seeker Tier – She leans in and dares you to stay...</div>
+      </a>
+    </div>
+    <div class="teaser">
+      <a href="membership.html">
+        <img src="images/lilith-uncensored-blur.jpg" alt="Uncensored Tease">
+        <div class="overlay">Devoted Tier – No veil. No rules. No turning back.</div>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <p>
+      &copy; 2025 Nocturne Nights. All rights reserved.<br>
+      <a href="index.html">Home</a> |
+      <a href="membership.html">Membership</a> |
+      <a href="legal.html">Legal</a>
+    </p>
+  </footer>
+</body>
+</html>
 
   <section class="section gallery-tier">
     <h3>Dark Whispers — Spicy Tier</h3>
