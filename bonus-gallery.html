@@ -71,9 +71,30 @@
     .bundle a:hover {
       background-color: #a80000;
     }
+    #toggleAudio {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      background: #8b0000;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #toggleAudio:hover {
+      background: #a80000;
+    }
   </style>
 </head>
 <body>
+  <audio id="ambientAudio" loop autoplay>
+    <source src="audio/audiolilith-ambient.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <button id="toggleAudio">🔇 Sound Off</button>
+
   <h1>Lilith's Bonus Image Gallery</h1>
 
   <h2>💋 Regular Bonus Images</h2>
@@ -101,5 +122,22 @@
     <h3>💼 Get the Full Set – NSFW Bonus Pack</h3>
     <a href="https://legendarycreations.gumroad.com/l/zfddmr" target="_blank">Unlock All 5 NSFW for $8</a>
   </div>
+
+  <script>
+    const audio = document.getElementById('ambientAudio');
+    const toggle = document.getElementById('toggleAudio');
+
+    toggle.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        toggle.innerHTML = '🔇 Sound Off';
+      } else {
+        audio.pause();
+        toggle.innerHTML = '🔊 Sound On';
+      }
+    });
+  </script>
 </body>
 </html>
+
+ 
