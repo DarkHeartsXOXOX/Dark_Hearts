@@ -219,5 +219,49 @@
       <a href="legal.html">Legal</a>
     </p>
   </footer>
+  <audio id="ambientAudio" loop autoplay muted>
+  <source src="audio/audiolilith-ambient.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<button id="toggleAudio" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background: #8b0000;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9em;
+">
+  🔊 Sound On
+</button>
+
+<script>
+  const audio = document.getElementById('ambientAudio');
+  const toggle = document.getElementById('toggleAudio');
+
+  window.addEventListener('click', () => {
+    if (audio.muted) {
+      audio.muted = false;
+      audio.play();
+      toggle.textContent = '🔇 Sound Off';
+    }
+  }, { once: true });
+
+  toggle.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      toggle.textContent = '🔇 Sound Off';
+    } else {
+      audio.pause();
+      toggle.textContent = '🔊 Sound On';
+    }
+  });
+</script>
+
 </body>
 </html>
