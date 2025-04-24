@@ -82,6 +82,7 @@
       padding: 10px 15px;
       border-radius: 10px;
       cursor: pointer;
+      font-size: 0.9em;
     }
     #toggleAudio:hover {
       background: #a80000;
@@ -89,11 +90,11 @@
   </style>
 </head>
 <body>
-  <audio id="ambientAudio" loop autoplay>
+  <audio id="ambientAudio" loop autoplay muted>
     <source src="audio/audiolilith-ambient.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
-  <button id="toggleAudio">🔇 Sound Off</button>
+  <button id="toggleAudio">🔊 Sound On</button>
 
   <h1>Lilith's Bonus Image Gallery</h1>
 
@@ -126,15 +127,36 @@
   <script>
     const audio = document.getElementById('ambientAudio');
     const toggle = document.getElementById('toggleAudio');
+    const hoverSound = new Audio("audio/hover-sound.mp3");
+    const clickSound = new Audio("audio/click-sound.mp3");
+
+    window.addEventListener('click', () => {
+      if (audio.muted) {
+        audio.muted = false;
+        audio.play();
+        toggle.textContent = '🔇 Sound Off';
+      }
+    }, { once: true });
 
     toggle.addEventListener('click', () => {
       if (audio.paused) {
         audio.play();
-        toggle.innerHTML = '🔇 Sound Off';
+        toggle.textContent = '🔇 Sound Off';
       } else {
         audio.pause();
-        toggle.innerHTML = '🔊 Sound On';
+        toggle.textContent = '🔊 Sound On';
       }
+    });
+
+    document.querySelectorAll('a, button, .card').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        hoverSound.currentTime = 0;
+        hoverSound.play();
+      });
+      el.addEventListener('click', () => {
+        clickSound.currentTime = 0;
+        clickSound.play();
+      });
     });
   </script>
 </body>
