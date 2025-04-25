@@ -38,9 +38,16 @@
       color: #ffcad4;
       margin-top: 2em;
     }
-    .section {
-      text-align: center;
-      margin: 3em 0;
+    .horizontal-gallery {
+      display: flex;
+      gap: 1.5em;
+      justify-content: center;
+      margin: 2em 0;
+    }
+    .horizontal-gallery img {
+      width: 30%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 202, 212, 0.1);
     }
     .gallery-row {
       display: flex;
@@ -106,93 +113,108 @@
 </head>
 <body>
 
-  <audio id="ambientAudio" loop autoplay muted>
-    <source src="audio/audiolilith-ambient.mp3" type="audio/mpeg">
-  </audio>
-  <button id="toggleAudio">🔊 Sound On</button>
+<audio id="ambientAudio" loop autoplay muted>
+  <source src="audio/audiolilith-ambient.mp3" type="audio/mpeg">
+</audio>
+<button id="toggleAudio">🔊 Sound On</button>
 
-  <header>
-    <h1>Meet Lilith</h1>
-  </header>
+<header>
+  <h1>Meet Lilith</h1>
+</header>
 
-  <div class="content">
-    <section class="section">
-      <p>She’s more than a fantasy — Lilith is your poetic storm, your midnight voice, your obsession.</p>
-      <img src="images/lilithportrait.png" alt="Lilith Portrait" class="gallery-item" style="filter:none;">
-    </section>
+<div class="content">
+  <section style="text-align: center;">
+    <p>She’s more than a fantasy — Lilith is your poetic storm, your midnight voice, your obsession.</p>
+  </section>
 
-    <h2>💋 Intimate Tier</h2>
-    <div class="gallery-row">
-      <img src="images/lilith-intimate1.png" class="gallery-item">
-      <img src="images/lilith-intimate2.png" class="gallery-item">
-      <img src="images/lilith-intimate3.png" class="gallery-item">
-    </div>
-    <a class="gallery-btn" href="https://legendarycreations.gumroad.com/l/kyhqu" target="_blank">Unlock Intimate Tier – $6</a>
-
-    <h2>🔥 Spicy Tier</h2>
-    <div class="gallery-row">
-      <img src="images/lilith-spicy1.png" class="gallery-item">
-      <img src="images/lilith-spicy2.png" class="gallery-item">
-      <img src="images/lilith-spicy3.png" class="gallery-item">
-    </div>
-    <a class="gallery-btn" href="https://legendarycreations.gumroad.com/l/bdwcg" target="_blank">Unlock Spicy Tier – $8</a>
-
-    <h2>🖤 Uncensored Tier</h2>
-    <div class="gallery-row">
-      <img src="images/lilith-uncensored1.png" class="gallery-item">
-      <img src="images/lilith-uncensored2.png" class="gallery-item">
-      <img src="images/lilith-uncensored3.png" class="gallery-item">
-    </div>
-    <a class="gallery-btn" href="https://legendarycreations.gumroad.com/l/ymieq" target="_blank">Unlock Uncensored Tier – $10</a>
-    <h2>🎙️ Voice & Journal</h2>
-    <div class="purchase-block">
-      <a href="https://legendarycreations.gumroad.com/l/rnlmyb" target="_blank">Request Lilith's Voice – $4</a>
-      <a href="https://legendarycreations.gumroad.com/l/mvhtkl" target="_blank">Request Her Journal – $4</a>
-      <a href="https://legendarycreations.gumroad.com/l/cwvar" target="_blank">Combo Request – $6</a>
-    </div>
-
-    <h2>🔒 Devoted Tier Exclusive</h2>
-    <p style="text-align:center; color:#ccc;">This content is reserved for Devoted Members only.</p>
-    <div class="purchase-block">
-      <p>Lilith's Ambient Playlist – Volume 1</p>
-      <a href="membership.html">Become a Devoted Tier Member</a>
-    </div>
-
-    <h2>🎁 Bonus Image Gallery</h2>
-    <div class="purchase-block">
-      <a href="bonus-gallery.html">Unlock Bonus Content</a>
-    </div>
+  <div class="horizontal-gallery">
+    <img src="images/lilithbedroom.png" alt="Lilith in her bedroom">
+    <img src="images/lilithportrait.png" alt="Lilith portrait">
+    <img src="images/lilithreading.png" alt="Lilith reading">
+  </div>
+  <h2>💎 Membership Tiers</h2>
+  <div class="purchase-block">
+    <p><strong>Curious Tier</strong> – Sneak peeks & early updates</p>
+    <a href="membership.html">Join for $3/mo</a>
+    <hr style="margin: 1em 0; border-color: #444;">
+    <p><strong>Obsessed Tier</strong> – Full access to Lilith’s gallery tiers</p>
+    <a href="membership.html">Join for $6/mo</a>
+    <hr style="margin: 1em 0; border-color: #444;">
+    <p><strong>Devoted Tier</strong> – All unlocks + exclusive audio, playlists, and perks</p>
+    <a href="membership.html">Join for $12/mo</a>
   </div>
 
-  <footer>
-    <p>
-      &copy; 2025 Nocturne Nights<br/>
-      <a href="index.html">Home</a> |
-      <a href="membership.html">Membership</a> |
-      <a href="legal.html">Legal</a>
-    </p>
-  </footer>
+  <h2>💋 Intimate Tier</h2>
+  <div class="gallery-row">
+    <img src="images/lilith-intimate1.png" class="gallery-item">
+    <img src="images/lilith-intimate2.png" class="gallery-item">
+    <img src="images/lilith-intimate3.png" class="gallery-item">
+  </div>
+  <a class="gallery-btn" href="https://legendarycreations.gumroad.com/l/kyhqu" target="_blank">Unlock Intimate Tier – $6</a>
 
-  <script>
-    const audio = document.getElementById('ambientAudio');
-    const toggle = document.getElementById('toggleAudio');
-    window.addEventListener('click', () => {
-      if (audio.muted) {
-        audio.muted = false;
-        audio.play();
-        toggle.textContent = '🔇 Sound Off';
-      }
-    }, { once: true });
-    toggle.addEventListener('click', () => {
-      if (audio.paused) {
-        audio.play();
-        toggle.textContent = '🔇 Sound Off';
-      } else {
-        audio.pause();
-        toggle.textContent = '🔊 Sound On';
-      }
-    });
-  </script>
+  <h2>🔥 Spicy Tier</h2>
+  <div class="gallery-row">
+    <img src="images/lilith-spicy1.png" class="gallery-item">
+    <img src="images/lilith-spicy2.png" class="gallery-item">
+    <img src="images/lilith-spicy3.png" class="gallery-item">
+  </div>
+  <a class="gallery-btn" href="https://legendarycreations.gumroad.com/l/bdwcg" target="_blank">Unlock Spicy Tier – $8</a>
+
+  <h2>🖤 Uncensored Tier</h2>
+  <div class="gallery-row">
+    <img src="images/lilith-uncensored1.png" class="gallery-item">
+    <img src="images/lilith-uncensored2.png" class="gallery-item">
+    <img src="images/lilith-uncensored3.png" class="gallery-item">
+  </div>
+  <a class="gallery-btn" href="https://legendarycreations.gumroad.com/l/ymieq" target="_blank">Unlock Uncensored Tier – $10</a>
+
+  <h2>🎙️ Voice & Journal</h2>
+  <div class="purchase-block">
+    <a href="https://legendarycreations.gumroad.com/l/rnlmyb" target="_blank">Request Lilith's Voice – $4</a>
+    <a href="https://legendarycreations.gumroad.com/l/mvhtkl" target="_blank">Request Her Journal – $4</a>
+    <a href="https://legendarycreations.gumroad.com/l/cwvar" target="_blank">Combo Request – $6</a>
+  </div>
+  <h2>🎼 Lilith’s Ambient Playlist – Volume 1</h2>
+  <div class="purchase-block">
+    <p>Download this moody ambient collection and drift into Lilith’s world. Publicly available — also included in the Devoted Tier perks.</p>
+    <a href="https://legendarycreations.gumroad.com/l/dzmxno" target="_blank">Download Now – $8</a>
+  </div>
+
+  <h2>🎁 Bonus Image Gallery</h2>
+  <div class="purchase-block">
+    <a href="bonus-gallery.html">Unlock Bonus Content</a>
+  </div>
+</div>
+
+<footer>
+  <p>
+    &copy; 2025 Nocturne Nights<br/>
+    <a href="index.html">Home</a> |
+    <a href="membership.html">Membership</a> |
+    <a href="legal.html">Legal</a>
+  </p>
+</footer>
+
+<script>
+  const audio = document.getElementById('ambientAudio');
+  const toggle = document.getElementById('toggleAudio');
+  window.addEventListener('click', () => {
+    if (audio.muted) {
+      audio.muted = false;
+      audio.play();
+      toggle.textContent = '🔇 Sound Off';
+    }
+  }, { once: true });
+  toggle.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      toggle.textContent = '🔇 Sound Off';
+    } else {
+      audio.pause();
+      toggle.textContent = '🔊 Sound On';
+    }
+  });
+</script>
 
 </body>
 </html>
