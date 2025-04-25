@@ -77,53 +77,33 @@
     footer a:hover {
       text-decoration: underline;
     }
+    #toggleAudio {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      background: #8b0000;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 0.9em;
+    }
+    #toggleAudio:hover {
+      background: #a80000;
+    }
   </style>
 </head>
- <audio id="ambientAudio" loop autoplay muted>
-  <source src="audio/audiolilith-ambient.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
-<button id="toggleAudio" style="
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-  background: #8b0000;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 0.9em;
-">
-  🔊 Sound On
-</button>
-
-<script>
-  const audio = document.getElementById('ambientAudio');
-  const toggle = document.getElementById('toggleAudio');
-
-  window.addEventListener('click', () => {
-    if (audio.muted) {
-      audio.muted = false;
-      audio.play();
-      toggle.textContent = '🔇 Sound Off';
-    }
-  }, { once: true });
-
-  toggle.addEventListener('click', () => {
-    if (audio.paused) {
-      audio.play();
-      toggle.textContent = '🔇 Sound Off';
-    } else {
-      audio.pause();
-      toggle.textContent = '🔊 Sound On';
-    }
-  });
-</script>
- 
 <body>
+
+  <audio id="ambientAudio" loop autoplay muted>
+    <source src="audio/audiolilith-ambient.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <button id="toggleAudio">🔊 Sound On</button>
+
   <header>
     <h1>Meet Lilith</h1>
   </header>
@@ -139,17 +119,17 @@
       <h2>📸 Explore Bonus Image Sets</h2>
       <a href="bonus-gallery.html">View Lilith's Bonus Gallery</a>
     </div>
-    <section style="margin-top: 4em; text-align: center;">
-  <h2 style="color: #ffcad4;">🎼 Lilith’s Ambient Playlist – Volume 1</h2>
-  <p style="max-width: 700px; margin: auto; color: #ccc;">
-    Immerse yourself in Lilith’s sonic dreamscape with this exclusive playlist of haunting ambient tracks.
-    Perfect for journaling, meditating, or surrendering to the night. Yours to download and keep forever.
-  </p>
-  <a href="https://legendarycreations.gumroad.com/l/dzmxno" target="_blank" style="display:inline-block;margin-top:1em;padding:1em 2em;background:#8b0000;color:#fff;text-decoration:none;border-radius:10px;">
-    🎧 Download Now – $8
-  </a>
-</section>
 
+    <section style="margin-top: 4em; text-align: center;">
+      <h2 style="color: #ffcad4;">🎼 Lilith’s Ambient Playlist – Volume 1</h2>
+      <p style="max-width: 700px; margin: auto; color: #ccc;">
+        Immerse yourself in Lilith’s sonic dreamscape with this exclusive playlist of haunting ambient tracks.
+        Perfect for journaling, meditating, or surrendering to the night. Yours to download and keep forever.
+      </p>
+      <a href="https://legendarycreations.gumroad.com/l/dzmxno" target="_blank" style="display:inline-block;margin-top:1em;padding:1em 2em;background:#8b0000;color:#fff;text-decoration:none;border-radius:10px;">
+        🎧 Download Now – $8
+      </a>
+    </section>
   </div>
 
   <footer>
@@ -160,5 +140,31 @@
       <a href="legal.html">Legal</a>
     </p>
   </footer>
+
+  <script>
+    const audio = document.getElementById('ambientAudio');
+    const toggle = document.getElementById('toggleAudio');
+
+    window.addEventListener('click', () => {
+      if (audio.muted) {
+        audio.muted = false;
+        audio.play();
+        toggle.textContent = '🔇 Sound Off';
+      }
+    }, { once: true });
+
+    toggle.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        toggle.textContent = '🔇 Sound Off';
+      } else {
+        audio.pause();
+        toggle.textContent = '🔊 Sound On';
+      }
+    });
+  </script>
+
 </body>
 </html>
+
+ 
