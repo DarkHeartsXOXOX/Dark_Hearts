@@ -33,55 +33,66 @@
       max-width: 1000px;
       margin: auto;
     }
-    .intro {
+    h2 {
       text-align: center;
-      font-size: 1.1em;
-      margin-bottom: 3em;
+      color: #ffcad4;
+      margin-top: 2em;
     }
-    .profile-img {
+    .section {
+      text-align: center;
+      margin: 3em 0;
+    }
+    .gallery-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      justify-content: center;
+    }
+    .gallery-item {
+      width: 180px;
+      filter: blur(5px) brightness(0.7);
+      border-radius: 12px;
+    }
+    .gallery-btn {
       display: block;
-      margin: 2em auto;
-      max-width: 300px;
-      border-radius: 14px;
-      box-shadow: 0 0 14px rgba(255, 202, 212, 0.2);
-    }
-    .gallery-link {
-      text-align: center;
-      margin-top: 3em;
-    }
-    .gallery-link a {
-      display: inline-block;
+      margin: 0.5em auto 2em auto;
+      padding: 0.5em 1.5em;
       background-color: #8b0000;
       color: #fff;
-      padding: 1em 2.5em;
-      font-size: 1em;
+      border: none;
       border-radius: 10px;
       text-decoration: none;
     }
-    .gallery-link a:hover {
-      background-color: #a80000;
+    .purchase-block {
+      background-color: #1a1a1a;
+      padding: 2em;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 8px rgba(255, 202, 212, 0.15);
+    }
+    .purchase-block a {
+      display: inline-block;
+      margin: 0.5em;
+      padding: 1em 2em;
+      background-color: #8b0000;
+      color: #fff;
+      border-radius: 10px;
+      text-decoration: none;
     }
     footer {
       text-align: center;
-      margin-top: 4em;
-      padding-top: 2em;
-      border-top: 1px solid #333;
+      padding: 2em 0;
       font-size: 0.85em;
       color: #888;
     }
     footer a {
       color: #ffcad4;
-      text-decoration: none;
       margin: 0 1em;
-    }
-    footer a:hover {
-      text-decoration: underline;
     }
     #toggleAudio {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      z-index: 999;
       background: #8b0000;
       color: #fff;
       border: none;
@@ -89,9 +100,7 @@
       border-radius: 10px;
       cursor: pointer;
       font-size: 0.9em;
-    }
-    #toggleAudio:hover {
-      background: #a80000;
+      z-index: 999;
     }
   </style>
 </head>
@@ -99,9 +108,7 @@
 
   <audio id="ambientAudio" loop autoplay muted>
     <source src="audio/audiolilith-ambient.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
   </audio>
-
   <button id="toggleAudio">🔊 Sound On</button>
 
   <header>
@@ -109,32 +116,57 @@
   </header>
 
   <div class="content">
-    <div class="intro">
+    <section class="section">
       <p>She’s more than a fantasy — Lilith is your poetic storm, your midnight voice, your obsession.</p>
-    </div>
-
-    <img src="images/lilithportrait.png" alt="Lilith Portrait" class="profile-img"/>
-
-    <div class="gallery-link">
-      <h2>📸 Explore Bonus Image Sets</h2>
-      <a href="bonus-gallery.html">View Lilith's Bonus Gallery</a>
-    </div>
-
-    <section style="margin-top: 4em; text-align: center;">
-      <h2 style="color: #ffcad4;">🎼 Lilith’s Ambient Playlist – Volume 1</h2>
-      <p style="max-width: 700px; margin: auto; color: #ccc;">
-        Immerse yourself in Lilith’s sonic dreamscape with this exclusive playlist of haunting ambient tracks.
-        Perfect for journaling, meditating, or surrendering to the night. Yours to download and keep forever.
-      </p>
-      <a href="https://legendarycreations.gumroad.com/l/dzmxno" target="_blank" style="display:inline-block;margin-top:1em;padding:1em 2em;background:#8b0000;color:#fff;text-decoration:none;border-radius:10px;">
-        🎧 Download Now – $8
-      </a>
+      <img src="images/lilithportrait.png" alt="Lilith Portrait" class="gallery-item" style="filter:none;">
     </section>
+
+    <h2>💋 Intimate Tier</h2>
+    <div class="gallery-row">
+      <img src="images/lilith-intimate1.png" class="gallery-item">
+      <img src="images/lilith-intimate2.png" class="gallery-item">
+      <img src="images/lilith-intimate3.png" class="gallery-item">
+    </div>
+    <a class="gallery-btn" href="https://legendarycreations.gumroad.com/l/kyhqu" target="_blank">Unlock Intimate Tier – $6</a>
+
+    <h2>🔥 Spicy Tier</h2>
+    <div class="gallery-row">
+      <img src="images/lilith-spicy1.png" class="gallery-item">
+      <img src="images/lilith-spicy2.png" class="gallery-item">
+      <img src="images/lilith-spicy3.png" class="gallery-item">
+    </div>
+    <a class="gallery-btn" href="https://legendarycreations.gumroad.com/l/bdwcg" target="_blank">Unlock Spicy Tier – $8</a>
+
+    <h2>🖤 Uncensored Tier</h2>
+    <div class="gallery-row">
+      <img src="images/lilith-uncensored1.png" class="gallery-item">
+      <img src="images/lilith-uncensored2.png" class="gallery-item">
+      <img src="images/lilith-uncensored3.png" class="gallery-item">
+    </div>
+    <a class="gallery-btn" href="https://legendarycreations.gumroad.com/l/ymieq" target="_blank">Unlock Uncensored Tier – $10</a>
+    <h2>🎙️ Voice & Journal</h2>
+    <div class="purchase-block">
+      <a href="https://legendarycreations.gumroad.com/l/rnlmyb" target="_blank">Request Lilith's Voice – $4</a>
+      <a href="https://legendarycreations.gumroad.com/l/mvhtkl" target="_blank">Request Her Journal – $4</a>
+      <a href="https://legendarycreations.gumroad.com/l/cwvar" target="_blank">Combo Request – $6</a>
+    </div>
+
+    <h2>🔒 Devoted Tier Exclusive</h2>
+    <p style="text-align:center; color:#ccc;">This content is reserved for Devoted Members only.</p>
+    <div class="purchase-block">
+      <p>Lilith's Ambient Playlist – Volume 1</p>
+      <a href="membership.html">Become a Devoted Tier Member</a>
+    </div>
+
+    <h2>🎁 Bonus Image Gallery</h2>
+    <div class="purchase-block">
+      <a href="bonus-gallery.html">Unlock Bonus Content</a>
+    </div>
   </div>
 
   <footer>
     <p>
-      &copy; 2025 Nocturne Nights. All rights reserved.<br/>
+      &copy; 2025 Nocturne Nights<br/>
       <a href="index.html">Home</a> |
       <a href="membership.html">Membership</a> |
       <a href="legal.html">Legal</a>
@@ -144,7 +176,6 @@
   <script>
     const audio = document.getElementById('ambientAudio');
     const toggle = document.getElementById('toggleAudio');
-
     window.addEventListener('click', () => {
       if (audio.muted) {
         audio.muted = false;
@@ -152,7 +183,6 @@
         toggle.textContent = '🔇 Sound Off';
       }
     }, { once: true });
-
     toggle.addEventListener('click', () => {
       if (audio.paused) {
         audio.play();
