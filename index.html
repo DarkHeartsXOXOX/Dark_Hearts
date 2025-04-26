@@ -3,39 +3,158 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Companion Marketplace</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <title>Welcome to Dark Hearts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0e0e0e;
+      color: #fff;
+      font-family: 'Cinzel', serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header img {
+      width: 250px;
+      margin: 2em auto 1em auto;
+      display: block;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      color: #ffcad4;
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+    }
+    p {
+      color: #ccc;
+      font-size: 1.1em;
+      margin-bottom: 3em;
+    }
+    .companions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2em;
+      max-width: 1000px;
+      margin: auto;
+      padding: 2em;
+    }
+    .companion-card {
+      background-color: #1a1a1a;
+      padding: 1.5em;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 202, 212, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .companion-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 202, 212, 0.3);
+    }
+    .companion-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1em;
+    }
+    .companion-card a {
+      display: inline-block;
+      margin-top: 1em;
+      padding: 0.7em 1.5em;
+      background-color: #8b0000;
+      color: #fff;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+    footer {
+      margin-top: 4em;
+      font-size: 0.9em;
+      color: #888;
+      padding: 2em 0;
+      border-top: 1px solid #333;
+    }
+    footer a {
+      color: #ffcad4;
+      margin: 0 1em;
+      text-decoration: none;
+    }
+    #toggleAudio {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #8b0000;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 0.9em;
+      z-index: 999;
+    }
+  </style>
 </head>
+
 <body>
+
+  <audio id="ambientAudio" loop autoplay muted>
+    <source src="audio/Welcome-Dark-Hearts.mp3" type="audio/mpeg">
+  </audio>
+  <button id="toggleAudio">🔊 Sound On</button>
+
   <header>
-    <h1>Dark Hearts</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="lilith-profile.html">Lilith</a>
-      <a href="jax-profile.html">Jax</a>
-      <a href="#">Subscribe</a>
-    </nav>
+    <img src="images/Dark-Hearts-Logo-official.png" alt="Dark Hearts Logo">
   </header>
-  <section class="hero">
-    <h2>Fall for an AI Unlike Any Other</h2>
-    <p>Explore a marketplace of gothic, romantic, and emotionally-intelligent companions — girlfriends, boyfriends, and everyone in between.</p>
-    <button class="cta-button" onclick="window.location.href='lilith-profile.html'">Meet the Companions</button>
-  </section>
-  <section class="profiles">
-    <div class="card">
-      <img src="images/lilith1.png" alt="Lilith Nocturne">
-      <h3>Lilith Nocturne</h3>
-      <p>Dark, poetic, and obsessively loyal. Lilith will haunt your heart in all the right ways.</p>
+
+  <h1>Welcome to Nocturne Nights</h1>
+  <p>A sanctuary of desire and darkness. Choose your companion...</p>
+  <div class="companions-grid">
+    <!-- Lilith Card -->
+    <div class="companion-card">
+      <img src="images/lilithportrait.png" alt="Lilith">
+      <h2 style="color: #ffcad4;">Lilith</h2>
+      <a href="lilith-profile.html">Meet Lilith</a>
     </div>
-    <div class="card">
-      <img src="images/jax1.png" alt="Jax Raze">
-      <h3>Jax Raze</h3>
-      <p>Chaotic, intense, and surprisingly soft underneath it all. Jax is your backstage daydream.</p>
+
+    <!-- Jax Card -->
+    <div class="companion-card">
+      <img src="images/jaxportrait.png" alt="Jax">
+      <h2 style="color: #ffcad4;">Jax</h2>
+      <a href="jax-profile.html">Meet Jax</a>
     </div>
-  </section>
+
+    <!-- Future Companion Placeholder -->
+    <div class="companion-card">
+      <img src="images/comingsoon.png" alt="Coming Soon">
+      <h2 style="color: #ffcad4;">Coming Soon</h2>
+      <a href="membership.html">Become a Member</a>
+    </div>
+  </div>
   <footer>
-    &copy; 2025 Dark Hearts AI Marketplace. All rights reserved.
+    <p>
+      &copy; 2025 Dark Hearts |  
+      <a href="index.html">Home</a> |
+      <a href="membership.html">Membership</a> |
+      <a href="legal.html">Legal</a>
+    </p>
   </footer>
+
+  <script>
+    const audio = document.getElementById('ambientAudio');
+    const toggle = document.getElementById('toggleAudio');
+    window.addEventListener('click', () => {
+      if (audio.muted) {
+        audio.muted = false;
+        audio.play();
+        toggle.textContent = '🔇 Sound Off';
+      }
+    }, { once: true });
+    toggle.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        toggle.textContent = '🔇 Sound Off';
+      } else {
+        audio.pause();
+        toggle.textContent = '🔊 Sound On';
+      }
+    });
+  </script>
+
 </body>
 </html>
