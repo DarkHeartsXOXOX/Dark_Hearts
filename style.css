@@ -66,3 +66,29 @@ footer {
   color: #777;
   font-size: 0.9em;
 }
+.butterfly {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url('images/butterfly.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  animation: floatUp 20s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-20vh) rotate(360deg);
+    opacity: 0;
+  }
+}
