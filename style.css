@@ -101,3 +101,29 @@ footer {
     filter: drop-shadow(0 0 12px #ffcad4);
   }
 }
+.butterfly.pink {
+  animation: floatUp 20s linear infinite, glowPink 6s ease-in-out infinite;
+}
+
+.butterfly.purple {
+  animation: floatUp 22s linear infinite, glowPurple 7s ease-in-out infinite;
+}
+
+.butterfly.silver {
+  animation: floatUp 24s linear infinite, glowSilver 8s ease-in-out infinite;
+}
+
+@keyframes glowPink {
+  0%, 100% { filter: drop-shadow(0 0 3px #ffcad4); }
+  50% { filter: drop-shadow(0 0 12px #ffcad4); }
+}
+
+@keyframes glowPurple {
+  0%, 100% { filter: drop-shadow(0 0 3px #a78bfa); }
+  50% { filter: drop-shadow(0 0 12px #a78bfa); }
+}
+
+@keyframes glowSilver {
+  0%, 100% { filter: drop-shadow(0 0 3px #ccc); }
+  50% { filter: drop-shadow(0 0 12px #ccc); }
+}
