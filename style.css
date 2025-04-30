@@ -127,3 +127,9 @@ footer {
   0%, 100% { filter: drop-shadow(0 0 3px #ccc); }
   50% { filter: drop-shadow(0 0 12px #ccc); }
 }
+.butterfly:hover {
+  filter: drop-shadow(0 0 15px #ffcad4) brightness(1.5);
+  transform: scale(1.1) rotate(10deg);
+  transition: all 0.4s ease-in-out;
+  z-index: 1;
+}
