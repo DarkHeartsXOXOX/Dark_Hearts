@@ -6,6 +6,28 @@
   <title>Meet Lilith</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
+     .rose.red {
+  background-image: url('images/rose-red.png');
+}
+
+.rose.purple {
+  background-image: url('images/rose-purple.png');
+}
+
+.rose.black {
+  background-image: url('images/rose-black.png');
+}
+.rose {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  animation: floatRose 22s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+  filter: drop-shadow(0 0 4px #660000);
     .rose {
       .rose {
   /* ...other properties */
@@ -35,32 +57,10 @@
     transform: translateY(-20vh) rotate(360deg);
     opacity: 0;
   }
- .rose.red {
-  background-image: url('images/rose-red.png');
-}
 
-.rose.purple {
-  background-image: url('images/rose-purple.png');
-}
-
-.rose.black {
-  background-image: url('images/rose-black.png');
-}
-.rose {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.5;
-  animation: floatRose 22s linear infinite;
-  pointer-events: none;
-  z-index: 0;
-  filter: drop-shadow(0 0 4px #660000);
 }
  
 }
-
     body {
       background-color: #0e0e0e;
       color: #fff;
