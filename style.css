@@ -179,3 +179,30 @@ footer {
 }
 
 }
+.rose {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url('images/rose.png'); /* Update if using a different filename */
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  animation: floatRose 22s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes floatRose {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-20vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
