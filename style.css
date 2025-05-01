@@ -161,4 +161,21 @@ footer {
     transform: translateY(-100vh) scale(0.6);
     opacity: 0;
   }
+  .companion-card a {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.7em 1.5em;
+  background-color: #8b0000;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 0 6px #8b0000;
+  transition: all 0.3s ease-in-out;
+}
+
+.companion-card a:hover {
+  box-shadow: 0 0 12px #ffcad4, 0 0 18px #ffcad4;
+  transform: scale(1.05);
+}
+
 }
