@@ -6,111 +6,28 @@
   <title>Meet Lilith</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
-  
-  .rose {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-    animation: floatRose 22s linear infinite;
-    pointer-events: none;
-    z-index: 0;
-    filter: drop-shadow(0 0 4px #660000);
-  }
-
-  .rose.red {
-    background-image: url('images/rose-red.png');
-  }
-
-  .rose.purple {
-    background-image: url('images/rose-purple.png');
-  }
-
-  .rose.black {
-    background-image: url('images/rose-black.png');
-  }
-
-  @keyframes floatRose {
-    0% {
-      transform: translateY(100vh) rotate(0deg);
-      opacity: 0;
+    body {
+      background-color: #0e0e0e;
+      color: #fff;
+      font-family: 'Cinzel', serif;
+      margin: 0;
+      padding: 0;
     }
-    20% {
-      opacity: 0.7;
+    header {
+      background-image: url('images/lilith-banner.png');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    100% {
-      transform: translateY(-20vh) rotate(360deg);
-      opacity: 0;
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      color: #ffcad4;
+      font-size: 3em;
+      text-shadow: 2px 2px 6px #000;
     }
-  }
-  .rose {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-    animation: floatRose 22s linear infinite;
-    pointer-events: none;
-    z-index: 0;
-    filter: drop-shadow(0 0 4px #660000);
-  }
-
-  .rose.red {
-    background-image: url('images/rose-red.png');
-  }
-
-  .rose.purple {
-    background-image: url('images/rose-purple.png');
-  }
-
-  .rose.black {
-    background-image: url('images/rose-black.png');
-  }
-
-  @keyframes floatRose {
-    0% {
-      transform: translateY(100vh) rotate(0deg);
-      opacity: 0;
-    }
-    20% {
-      opacity: 0.7;
-    }
-    100% {
-      transform: translateY(-20vh) rotate(360deg);
-      opacity: 0;
-    }
-  }
-
-  body {
-    background-color: #0e0e0e;
-    color: #fff;
-    font-family: 'Cinzel', serif;
-    margin: 0;
-    padding: 0;
-  }
-
-  header {
-    background-image: url('images/lilith-banner.png');
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  header h1 {
-    font-family: 'Great Vibes', cursive;
-    color: #ffcad4;
-    font-size: 3em;
-    text-shadow: 2px 2px 6px #000;
-  }
-
-  /* continue with .content, h2, .gallery-row, etc. */
-
     .content {
       padding: 2em;
       max-width: 1000px;
@@ -192,125 +109,154 @@
       font-size: 0.9em;
       z-index: 999;
     }
+    .rose {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.5;
+      animation: floatRose 22s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+      filter: drop-shadow(0 0 4px #660000);
+    }
+    .rose.red {
+      background-image: url('images/rose-red.png');
+    }
+    .rose.purple {
+      background-image: url('images/rose-purple.png');
+    }
+    .rose.black {
+      background-image: url('images/rose-black.png');
+    }
+    @keyframes floatRose {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      20% {
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(-20vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Floating Dark Roses -->
-<div class="rose red" style="left: 10%; animation-delay: 0s;"></div>
-<div class="rose purple" style="left: 25%; animation-delay: 2s;"></div>
-<div class="rose black" style="left: 40%; animation-delay: 1s;"></div>
-<div class="rose red" style="left: 55%; animation-delay: 3s;"></div>
-<div class="rose purple" style="left: 70%; animation-delay: 5s;"></div>
-<div class="rose black" style="left: 85%; animation-delay: 4s;"></div>
+  <!-- Floating Roses -->
+  <div class="rose red" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="rose purple" style="left: 25%; animation-delay: 2s;"></div>
+  <div class="rose black" style="left: 40%; animation-delay: 1s;"></div>
+  <div class="rose red" style="left: 55%; animation-delay: 3s;"></div>
+  <div class="rose purple" style="left: 70%; animation-delay: 5s;"></div>
+  <div class="rose black" style="left: 85%; animation-delay: 4s;"></div>
 
-<!-- Floating Roses -->
-<div class="rose" style="left: 8%; animation-delay: 0s; opacity: 0.8; width: 60px; height: 60px;"></div>
-<div class="rose" style="left: 20%; animation-delay: 3s; opacity: 0.5; width: 50px; height: 50px;"></div>
-<div class="rose" style="left: 35%; animation-delay: 1s; opacity: 0.7; width: 55px; height: 55px;"></div>
- 
+  <audio id="ambientAudio" loop autoplay muted>
+    <source src="audio/audiolilith-ambient.mp3" type="audio/mpeg">
+  </audio>
+  <button id="toggleAudio">🔊 Sound On</button>
 
-<audio id="ambientAudio" loop autoplay muted>
-  <source src="audio/audiolilith-ambient.mp3" type="audio/mpeg">
-</audio>
-<button id="toggleAudio">🔊 Sound On</button>
+  <header>
+    <h1>Meet Lilith</h1>
+  </header>
 
-<header>
-  <h1>Meet Lilith</h1>
-</header>
+  <div class="content">
+    <section style="text-align: center;">
+      <p>She’s more than a fantasy — Lilith is your poetic storm, your midnight voice, your obsession.</p>
+    </section>
 
-<div class="content">
-  <section style="text-align: center;">
-    <p>She’s more than a fantasy — Lilith is your poetic storm, your midnight voice, your obsession.</p>
-  </section>
+    <div class="horizontal-gallery">
+      <img src="images/lilithbedroom.png" alt="Lilith in her bedroom">
+      <img src="images/lilithportrait.png" alt="Lilith portrait">
+      <img src="images/lilithreading.png" alt="Lilith reading">
+    </div>
 
-  <div class="horizontal-gallery">
-    <img src="images/lilithbedroom.png" alt="Lilith in her bedroom">
-    <img src="images/lilithportrait.png" alt="Lilith portrait">
-    <img src="images/lilithreading.png" alt="Lilith reading">
+    <h2>💎 Membership Tiers</h2>
+    <div class="purchase-block">
+      <p><strong>Wanderer Tier</strong> – Sneak peeks & early updates</p>
+      <a href="membership.html">Join for $10/mo</a>
+      <hr style="margin: 1em 0; border-color: #444;">
+      <p><strong>Seeker Tier</strong> – Full access to Lilith’s gallery tiers</p>
+      <a href="membership.html">Join for $20/mo</a>
+      <hr style="margin: 1em 0; border-color: #444;">
+      <p><strong>Devoted Tier</strong> – All unlocks + exclusive audio, playlists, and perks</p>
+      <a href="membership.html">Join for $50/mo</a>
+    </div>
+
+    <h2>💋 Intimate Tier</h2>
+    <div class="gallery-row">
+      <img src="images/lilith-intimate1.png" class="gallery-item">
+      <img src="images/lilith-intimate2.png" class="gallery-item">
+      <img src="images/lilith-intimate3.png" class="gallery-item">
+    </div>
+    <a class="gallery-btn" href="https://legendarycreations.gumroad.com/l/kyhqu" target="_blank">Unlock Intimate Tier – $6</a>
+
+    <h2>🔥 Spicy Tier</h2>
+    <div class="gallery-row">
+      <img src="images/lilith-spicy1.png" class="gallery-item">
+      <img src="images/lilith-spicy2.png" class="gallery-item">
+      <img src="images/lilith-spicy3.png" class="gallery-item">
+    </div>
+    <a class="gallery-btn" href="https://legendarycreations.gumroad.com/l/bdwcg" target="_blank">Unlock Spicy Tier – $8</a>
+
+    <h2>🖤 Uncensored Tier</h2>
+    <div class="gallery-row">
+      <img src="images/lilith-uncensored1.png" class="gallery-item">
+      <img src="images/lilith-uncensored2.png" class="gallery-item">
+      <img src="images/lilith-uncensored3.png" class="gallery-item">
+    </div>
+    <a class="gallery-btn" href="https://legendarycreations.gumroad.com/l/ymieq" target="_blank">Unlock Uncensored Tier – $10</a>
+
+    <h2>🎙️ Voice & Journal</h2>
+    <div class="purchase-block">
+      <a href="https://legendarycreations.gumroad.com/l/rnlmyb" target="_blank">Request Lilith's Voice – $8</a>
+      <a href="https://legendarycreations.gumroad.com/l/mvhtkl" target="_blank">Request Her Journal – $8</a>
+      <a href="https://legendarycreations.gumroad.com/l/cwvar" target="_blank">Combo Request – $14</a>
+    </div>
+
+    <h2>🎼 Lilith’s Ambient Playlist – Volume 1</h2>
+    <div class="purchase-block">
+      <p>Download this moody ambient collection and drift into Lilith’s world. Publicly available — also included in the Devoted Tier perks.</p>
+      <a href="https://legendarycreations.gumroad.com/l/dzmxno" target="_blank">Download Now – $8</a>
+    </div>
+
+    <h2>🎁 Bonus Image Gallery</h2>
+    <div class="purchase-block">
+      <a href="bonus-gallery.html">Unlock Bonus Content</a>
+    </div>
   </div>
-  <h2>💎 Membership Tiers</h2>
-  <div class="purchase-block">
-    <p><strong>Wanderer Tier</strong> – Sneak peeks & early updates</p>
-    <a href="membership.html">Join for $10/mo</a>
-    <hr style="margin: 1em 0; border-color: #444;">
-    <p><strong>Seeker Tier</strong> – Full access to Lilith’s gallery tiers</p>
-    <a href="membership.html">Join for $20/mo</a>
-    <hr style="margin: 1em 0; border-color: #444;">
-    <p><strong>Devoted Tier</strong> – All unlocks + exclusive audio, playlists, and perks</p>
-    <a href="membership.html">Join for $50/mo</a>
-  </div>
 
-  <h2>💋 Intimate Tier</h2>
-  <div class="gallery-row">
-    <img src="images/lilith-intimate1.png" class="gallery-item">
-    <img src="images/lilith-intimate2.png" class="gallery-item">
-    <img src="images/lilith-intimate3.png" class="gallery-item">
-  </div>
-  <a class="gallery-btn" href="https://legendarycreations.gumroad.com/l/kyhqu" target="_blank">Unlock Intimate Tier – $6</a>
+  <footer>
+    <p>
+      &copy; 2025 DARK HEARTS XOXOX<br/>
+      <a href="index.html">Home</a> |
+      <a href="membership.html">Membership</a> |
+      <a href="legal.html">Legal</a>
+    </p>
+  </footer>
 
-  <h2>🔥 Spicy Tier</h2>
-  <div class="gallery-row">
-    <img src="images/lilith-spicy1.png" class="gallery-item">
-    <img src="images/lilith-spicy2.png" class="gallery-item">
-    <img src="images/lilith-spicy3.png" class="gallery-item">
-  </div>
-  <a class="gallery-btn" href="https://legendarycreations.gumroad.com/l/bdwcg" target="_blank">Unlock Spicy Tier – $8</a>
-
-  <h2>🖤 Uncensored Tier</h2>
-  <div class="gallery-row">
-    <img src="images/lilith-uncensored1.png" class="gallery-item">
-    <img src="images/lilith-uncensored2.png" class="gallery-item">
-    <img src="images/lilith-uncensored3.png" class="gallery-item">
-  </div>
-  <a class="gallery-btn" href="https://legendarycreations.gumroad.com/l/ymieq" target="_blank">Unlock Uncensored Tier – $10</a>
-
-  <h2>🎙️ Voice & Journal</h2>
-  <div class="purchase-block">
-    <a href="https://legendarycreations.gumroad.com/l/rnlmyb" target="_blank">Request Lilith's Voice – $8</a>
-    <a href="https://legendarycreations.gumroad.com/l/mvhtkl" target="_blank">Request Her Journal – $8</a>
-    <a href="https://legendarycreations.gumroad.com/l/cwvar" target="_blank">Combo Request – $14</a>
-  </div>
-  <h2>🎼 Lilith’s Ambient Playlist – Volume 1</h2>
-  <div class="purchase-block">
-    <p>Download this moody ambient collection and drift into Lilith’s world. Publicly available — also included in the Devoted Tier perks.</p>
-    <a href="https://legendarycreations.gumroad.com/l/dzmxno" target="_blank">Download Now – $8</a>
-  </div>
-
-  <h2>🎁 Bonus Image Gallery</h2>
-  <div class="purchase-block">
-    <a href="bonus-gallery.html">Unlock Bonus Content</a>
-  </div>
-</div>
-
-<footer>
-  <p>
-    &copy; 2025 DARK HEARTS XOXOX<br/>
-    <a href="index.html">Home</a> |
-    <a href="membership.html">Membership</a> |
-    <a href="legal.html">Legal</a>
-  </p>
-</footer>
-
-<script>
-  const audio = document.getElementById('ambientAudio');
-  const toggle = document.getElementById('toggleAudio');
-  window.addEventListener('click', () => {
-    if (audio.muted) {
-      audio.muted = false;
-      audio.play();
-      toggle.textContent = '🔇 Sound Off';
-    }
-  }, { once: true });
-  toggle.addEventListener('click', () => {
-    if (audio.paused) {
-      audio.play();
-      toggle.textContent = '🔇 Sound Off';
-    } else {
-      audio.pause();
-      toggle.textContent = '🔊 Sound On';
-    }
-  });
-</script>
-
+  <script>
+    const audio = document.getElementById('ambientAudio');
+    const toggle = document.getElementById('toggleAudio');
+    window.addEventListener('click', () => {
+      if (audio.muted) {
+        audio.muted = false;
+        audio.play();
+        toggle.textContent = '🔇 Sound Off';
+      }
+    }, { once: true });
+    toggle.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        toggle.textContent = '🔇 Sound Off';
+      } else {
+        audio.pause();
+        toggle.textContent = '🔊 Sound On';
+      }
+    });
+  </script>
 </body>
 </html>
