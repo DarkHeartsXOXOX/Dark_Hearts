@@ -139,10 +139,20 @@
       aiReply.textContent = "(Lilith is thinking...)";
       chatbox.appendChild(aiReply);
 
-      setTimeout(() => {
-        aiReply.textContent = getLilithReply(text);
-        chatbox.scrollTop = chatbox.scrollHeight;
-      }, 1000);
+      fetch('http://localhost:3000/api/chat', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ message: text })
+})
+.then(res => res.json())
+.then(data => {
+  aiReply.textContent = data.reply;
+  chatbox.scrollTop = chatbox.scrollHeight;
+})
+.catch(() => {
+  aiReply.textContent = '(Lilith is silent... something went wrong.)';
+});
+
     }
 
     function getLilithReply(userText) {
