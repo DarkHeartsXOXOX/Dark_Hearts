@@ -139,17 +139,19 @@
       aiReply.textContent = "(Lilith is thinking...)";
       chatbox.appendChild(aiReply);
 
-      fetch('http://localhost:3000/api/chat', {
+    fetch('http://localhost:3000/api/chat', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ message: text })
 })
 .then(res => res.json())
 .then(data => {
-  aiReply.textContent = data.reply;
+  console.log("Response from server:", data); // Add this
+  aiReply.textContent = data.reply || "(Lilith didn't reply...)"; // fallback
   chatbox.scrollTop = chatbox.scrollHeight;
 })
-.catch(() => {
+.catch((err) => {
+  console.error("Fetch error:", err); // Also add this for errors
   aiReply.textContent = '(Lilith is silent... something went wrong.)';
 });
 
